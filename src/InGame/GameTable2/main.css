@@ -1,0 +1,168 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+}
+body{
+    background-color: blanchedalmond;
+}
+
+.GameNav{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #2f363e;
+    align-items: center;
+    color: white;
+    /* flex-grow: 1; */
+}
+.AddCash{
+    background-color: #2f363e;
+    height: 100%;
+    width: 250px;
+    border-bottom-right-radius: 20%;
+    box-shadow: 1px 1px 1px grey;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+}
+.AddCash button{
+    margin-left: 3%;
+    height: 28px;
+    width: 75px;
+
+}
+.TableInfo{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-grow: 2; */
+}
+.TableInfo .gameId,.RummyInfo,.RummyChips,.Settings,.Exit{
+    height: 100%;
+    width: 160px;
+    border-right: 1px solid white;
+    text-align: center;
+}
+.TableInfo .RummyInfo{
+    width: 220px;
+}
+.TableInfo .RummyChips{
+    width: 100px;
+}
+.TableInfo .Settings{
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.TablePool{
+    height: 500px;
+    width: 85%;
+    background-color: rgb(7, 93, 7);
+    border: 2rem solid black;
+    border-radius: 39%;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+}
+.TablePool .multiPlayer{
+    height: 200px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid black;
+}
+.TablePool .cardSection{
+    min-height: 300px ;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid black;
+}
+.TablePool .singlePlayer{
+    height: 200px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+
+/* ================= openCard seaction =====================*/
+.cardSection{
+    display: flex;
+    flex-direction: column;
+}
+.cardSection .deckSetion, .openCards{
+    height: 50%;
+    width: 100%;
+    background-color: pink;
+    border: 2px solid black;
+    justify-content: center;
+}
+.openCards {
+    display: flex;
+    align-items: center;
+  }
+  .openCard {
+    z-index: 9;
+    background: var(--bg-panel);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 4px 4px 12px 2px rgba(black, 0.60);
+    transition: 0.2s;
+    height: 65px;
+    width: 30px;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: black; */
+    /* transition: top 1s linear, left 1s linear; */
+  }
+  .opacity{
+    opacity : 0.5
+  }
+  
+  .openCard:not(:first-child) {
+    margin-left: calc(var(--distance)*-1);
+  }
+  
+  .openCard:hover,
+  .openCard:focus-within {
+    transform: translatey(-1rem);
+  }
+  
+  .openCard:hover ~ .openCard,
+  .openCard:focus-within ~ .openCard {
+    transform: translatex(var(--distance));
+  }
+
+.openCard .number {
+    position: absolute;
+    font-size: 1.5rem;
+}
+
+.openCard.red{
+    color: red;
+}
+.openCard .suit_top{
+    top: 20px;
+    left: 5px;
+    font-size: 1rem;
+}
+.openCard .number.top{
+    top: 10px;
+    left: 5px;
+}
+.openCard .number.bottom{
+    bottom: 10px;
+    right: 10px;
+}
+.openCard .suit{
+    font-size: 3rem;
+} 

@@ -1,0 +1,259 @@
+
+body{
+    background-color: yellow;
+}
+  html{
+    --bg-panel: #EBEBEB;
+    --distance: 4rem;
+  }
+#gameScreen{
+    border: 1px solid grey;
+}
+.tablePool{
+    height: 700px;
+    width: 99%;
+    margin: auto;
+    border-radius: 45%;
+    border: 4px solid black;
+    background-color: green;
+    /* display: grid; */
+    /* place-items: end; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+  
+  .openCards {
+    align-self: flex-end;
+    display: flex;
+    
+  }
+  
+  .openCard {
+    z-index: 9;
+    background: var(--bg-panel);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 4px 4px 12px 2px rgba(black, 0.60);
+    transition: 0.2s;
+    height: 65px;
+    width: 30px;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+    /* transition: top 1s linear, left 1s linear; */
+  }
+  
+  .openCard:not(:first-child) {
+    margin-left: calc(var(--distance)*-1);
+  }
+  
+  .openCard:hover,
+  .openCard:focus-within {
+    transform: translatey(-1rem);
+  }
+  
+  .openCard:hover ~ .openCard,
+  .openCard:focus-within ~ .openCard {
+    transform: translatex(var(--distance));
+  }
+
+.openCard .number {
+    position: absolute;
+    font-size: 1.5rem;
+}
+
+.openCard.red{
+    color: red;
+}
+.openCard .suit_top{
+    top: 20px;
+    left: 5px;
+    font-size: 1rem;
+}
+.openCard .number.top{
+    top: 10px;
+    left: 5px;
+}
+.openCard .number.bottom{
+    bottom: 10px;
+    right: 10px;
+}
+.openCard .suit{
+    font-size: 3rem;
+} 
+
+/* ====closedDeck */
+
+.closedDeck{
+    display: flex;
+    align-self: center;
+}
+
+
+.closedCard {
+    z-index: 1;
+    background: var(--bg-panel);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 4px 4px 12px 2px rgba(black, 0.60);
+    transition: 0.2s;
+    height: 40px;
+    width: 5px;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+    /* transition: top 1s linear, left 1s linear; */
+  }
+  
+  .closedCard:not(:first-child) {
+    margin-left: calc(var(--distance)*-1);
+  }
+  
+  .inColumn{
+      align-self: flex-end;
+      /* display: flex;
+      flex-direction: column;
+      align-items: flex-end; */
+  }
+  .player1{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: 2px solid black;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+      margin-left: 30%;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      color: black;
+      font-size: 15px;
+  }
+
+  .sortBtn{
+      align-self: flex-end;
+      max-height: 50px;
+  }
+  .no-select {
+    user-select: none;
+  }
+  .multiplayer{
+      align-self: flex-start;
+  }
+
+
+  /* profile animation */
+/* 
+  .circle-wrap {
+    margin: 5px auto;
+    width: 150px;
+    height: 150px;
+    background: #FEFCFF;
+    border-radius: 50%;
+    border: 1px solid #CDCBD0;
+  }
+  .circle-wrap .circle .mask,
+  .circle-wrap .circle .fill {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .mask .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #227DED;
+  }
+  .circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+  }
+  .mask.full,
+  .circle .fill {
+    animation: fill ease-in-out 35s;
+    transform: rotate(180deg);
+  }
+  @keyframes fill{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(200deg);
+    }
+  }
+  .circle-wrap .inside-circle {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: #D2EAF1;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 14px;
+    margin-left: 14px;
+    color: #1E51DC;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 1em;
+  } */
+  
+
+  /* ======== new profle animations ======== */
+  * {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+  }
+
+  .time{
+      display: flex;
+      gap: 40px;
+      color: #fff;
+  }
+  .time .circle{
+      position: relative;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items:  center;
+  }
+  .time .circle svg {
+    padding: relative; 
+    width: 150px;
+    height: 150px;
+    transform:  rotate(270deg);
+  }
+  .time .circle svg circle{
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+      stroke: #191919;
+      stroke-width: 4;
+      transform: translate(5px,5px);
+  }
+  .time .circle svg circle:nth-child(2){
+      /* stroke: var(--clr); */
+        stroke : white;
+      stroke-dasharray: 440;
+  }
+  .time div{
+      position: absolute;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.5em;
+
+  }
+
+ 
+
+  /* ================================================================= draggable============= */
+  
