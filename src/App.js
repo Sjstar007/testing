@@ -1,16 +1,10 @@
-// import logo from './logo.svg';
-import TablePool from './InGame/GameTable/tablePool';
 import TablePool2 from './InGame/GameTable2/index';
 
-// import './App.css';
-
+// import Dnd from './InGame/GameTable2/dnd/dnd';
 function App() {
-  return (
-    <div className="">
-      {/* <TablePool /> */}
-      <TablePool2 />
-    </div>
-  );
+    return (<div className="">
+        <TablePool2/>
+    </div>);
 }
 
 export default App;

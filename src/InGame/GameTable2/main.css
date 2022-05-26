@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     /* box-sizing: border-box; */
 }
-body{ 
+
+body {
     background-color: blanchedalmond;
 }
 
-.GameNav{
+.GameNav {
     height: 50px;
     width: 100%;
     display: flex;
@@ -17,7 +18,8 @@ body{
     color: white;
     /* flex-grow: 1; */
 }
-.AddCash{
+
+.AddCash {
     background-color: #2f363e;
     height: 100%;
     width: 250px;
@@ -29,36 +31,42 @@ body{
     color: white;
     font-weight: 500;
 }
-.AddCash button{
+
+.AddCash button {
     margin-left: 3%;
     height: 28px;
     width: 75px;
 
 }
-.TableInfo{
+
+.TableInfo {
     display: flex;
     flex-wrap: wrap;
     /* flex-grow: 2; */
 }
-.TableInfo .gameId,.RummyInfo,.RummyChips,.Settings,.Exit{
+
+.TableInfo .gameId, .RummyInfo, .RummyChips, .Settings, .Exit {
     height: 100%;
     width: 160px;
     border-right: 1px solid white;
     text-align: center;
 }
-.TableInfo .RummyInfo{
+
+.TableInfo .RummyInfo {
     width: 220px;
 }
-.TableInfo .RummyChips{
+
+.TableInfo .RummyChips {
     width: 100px;
 }
-.TableInfo .Settings{
+
+.TableInfo .Settings {
     display: flex;
     align-items: center;
     width: 200px;
 }
 
-.TablePool{
+.TablePool {
     height: 500px;
     width: 85%;
     background-color: rgb(7, 93, 7);
@@ -70,18 +78,21 @@ body{
     display: flex;
     flex-direction: column;
 }
-.TablePool .multiPlayer{
+
+.TablePool .multiPlayer {
     height: 200px;
     width: 100%;
 
 
 }
-.TablePool .cardSection{
-    min-height: 450px ;
+
+.TablePool .cardSection {
+    min-height: 450px;
     width: 100%;
 
 }
-.TablePool .singlePlayer{
+
+.TablePool .singlePlayer {
     height: 200px;
     width: 100%;
     display: flex;
@@ -90,24 +101,27 @@ body{
 
 
 /* ================= openCard seaction =====================*/
-.cardSection{
+.cardSection {
     display: flex;
     flex-direction: column;
 }
-.cardSection .deckSetion, .openCards{
+
+.cardSection .deckSetion, .openCards {
     height: 50%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .openCards {
     display: flex;
     align-items: center;
-  }
-  .openCard {
+}
+
+.openCard {
     z-index: 9;
-    background: var(--bg-panel);
+    background: white;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 4px 4px 12px 2px rgba(black, 0.60);
@@ -122,58 +136,64 @@ body{
     cursor: pointer;
     /* background-color: black; */
     /* transition: top 1s linear, left 1s linear; */
-  }
-  .opacity{
-    opacity : 0.5
-  }
-  
-  .openCard:not(:first-child) {
-    margin-left: calc(var(--distance)*-1);
-  }
-  
-  .openCard:hover,
-  .openCard:focus-within {
-    transform: translatey(-1rem);
-  }
-  
-  .openCard:hover ~ .openCard,
-  .openCard:focus-within ~ .openCard {
-    transform: translatex(var(--distance));
-  }
+}
+
+.opacity {
+    opacity: 0.5
+}
+
+.openCard:not(:first-child) {
+    margin-left: calc(4rem * -1);
+}
+
+/* .openCard:hover,
+.openCard:focus-within {
+  transform: translatey(-1rem);
+}
+
+.openCard:hover ~ .openCard,
+.openCard:focus-within ~ .openCard {
+  transform: translatex(var(--distance));
+} */
 
 .openCard .number {
     position: absolute;
     font-size: 1.5rem;
 }
 
-.openCard.red{
+.openCard.red {
     color: red;
 }
-.openCard .suit_top{
+
+.openCard .suit_top {
     top: 20px;
     left: 5px;
     font-size: 1rem;
 }
-.openCard .number.top{
+
+.openCard .number.top {
     top: 10px;
     left: 5px;
 }
-.openCard .number.bottom{
+
+.openCard .number.bottom {
     bottom: 10px;
     right: 10px;
 }
-.openCard .suit{
-    font-size: 3rem;
-} 
 
-.openDeck{
+.openCard .suit {
+    font-size: 3rem;
+}
+
+.openDeck {
     height: 100px;
     width: 71px;
     border: 1px solid #000;
     margin-left: 10%;
     color: white;
 }
-.finishSlot{
+
+.finishSlot {
     height: 100px;
     width: 71px;
     border: 1px solid #000;
@@ -183,8 +203,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 /* ============================== closed cardSection =============================================== */
-.closedDeck{
+.closedDeck {
     display: flex;
     align-self: center;
 }
@@ -192,7 +213,7 @@ body{
 
 .closedCard {
     z-index: 1;
-    background: var(--bg-panel);
+    background: white;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 4px 4px 12px 2px rgba(black, 0.60);
@@ -206,50 +227,56 @@ body{
     justify-content: center;
     /* background-color: black; */
     /* transition: top 1s linear, left 1s linear; */
-  }
-  
-  .closedCard:not(:first-child) {
-    margin-left: calc(var(--distance)*-1);
-  }
+}
+
+.closedCard:not(:first-child) {
+    margin-left: calc(4rem * -1);
+}
+
 /* ============================= Profile View ==================================== */
 
-.time{
+.time {
     display: flex;
     gap: 40px;
     color: #fff;
     align-self: center;
 }
-.time .circle{
+
+.time .circle {
     position: relative;
     width: 150px;
     height: 150px;
     display: flex;
     justify-content: center;
-    align-items:  center;
+    align-items: center;
 }
+
 .time .circle svg {
-  padding: relative; 
-  width: 150px;
-  height: 150px;
-  transform:  rotate(270deg);
+    padding: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
 }
-.time .circle svg circle{
+
+.time .circle svg circle {
     width: 100%;
     height: 100%;
     fill: transparent;
     stroke: #191919;
     stroke-width: 10;
-    transform: translate(5px,5px);
+    transform: translate(5px, 5px);
 }
-.time .circle svg circle:nth-child(2){
+
+.time .circle svg circle:nth-child(2) {
     /* stroke: var(--clr); */
-      stroke : white;
+    stroke: white;
     stroke-dasharray: 440;
 }
-.time div{
+
+.time div {
     position: absolute;
     text-align: center;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2rem;
 
 }
